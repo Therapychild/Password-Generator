@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="card">
+      <h1 id="title-top">Generate a</h1>
+      <span id="title-bottom">random password</span>
+      <div id="sub-title">Never use an insecure password again.</div>
+      <button class="btn" id="btn-generate" onclick="gerneratePasswords()">Generate Passwords</button>
+      <button class="btn" id="btn-reset" onclick="resetPasswords()">Reset Passwords</button>
+      <div class="flex-container-column" id="length-container">
+          <div id="set-length">Choose password length.</div>
+          <input type="range" min="1" max="21" value="11" class="length-slider" id="password-range">
+          <div id="password-length">0</div>
+      </div>
+      <fieldset class="flex-container-column" id="complexity-container">
+        <legend id="set-complexity">Choose password complexity.</legend>
+        <div id="error" hidden>Please select at least one letter/character set.</div>
+          <div class="flex-container-row">
+          <div class="switch-container">
+            <label class="switch">
+              <input id="lower-case" type="checkbox" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div>Lowercase letters</div>
+          </div>
+          <div class="switch-container">
+            <label class="switch">
+              <input id="upper-case" type="checkbox" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div>Uppercase letters</div>
+          </div>
+          <div class="switch-container">
+            <label class="switch">
+              <input id="numerical-characters" type="checkbox" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div>Number Characters</div>
+          </div>
+          <div class="switch-container">
+            <label class="switch">
+              <input id="special-characters" type="checkbox" checked>
+              <span class="toggle-slider"></span>
+            </label>
+            <div>Special Characters</div>
+          </div>
+        </div>
+      </fieldset>
+      <!-- <hr id="split"> -->
+      <div class="flex-container-row" id="input-container">
+        <div class="flex-container-column inner-flex">
+          <input id="first-option"/>
+          <button class="btn" id="copy-btn-first" onclick="copyToClipboard('first-option')">Copy to clipboard</button>
+        </div>
+        <div class="flex-container-column inner-flex">
+          <input id="second-option"/>
+          <button class="btn" id="copy-btn-second" onclick="copyToClipboard('second-option')">Copy to clipboard</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
